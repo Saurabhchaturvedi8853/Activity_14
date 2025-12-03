@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+
+    <style>
+        /* GENERAL RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #1a73e8;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: #e8f0fe;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background: #1a73e8;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #155fc1;
+        }
+
+        /* COURSES */
+        .courses-section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .course-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .course-card {
+            background: white;
+            width: 280px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .course-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            margin-bottom: 20px;
+        }
+
+        .course-card button {
+            background: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .course-card button:hover {
+            background: #155fc1;
+        }
+
+        /* ENROLL FORM */
+        .enroll-section {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .enroll-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        .enroll-form input,
+        .enroll-form select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #777;
+        }
+
+        .enroll-form button {
+            background: #1a73e8;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .enroll-form button:hover {
+            background: #155fc1;
+        }
+
+        /* TESTIMONIALS */
+        .testimonial-section {
+            padding: 60px 20px;
+            background: #e8f0fe;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            width: 260px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #1a73e8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>LearnHub Academy</h1>
+        <nav>
+            <a href="#courses">Courses</a>
+            <a href="#enroll">Enroll</a>
+            <a href="#testimonials">Testimonials</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Upgrade Your Skills Anytime, Anywhere</h2>
+        <p>Explore high-quality courses taught by industry experts.</p>
+        <a href="#courses" class="btn">Browse Courses</a>
+    </section>
+
+    <!-- COURSE LISTINGS -->
+    <section id="courses" class="courses-section">
+        <h2>Our Courses</h2>
+        <div class="course-container">
+
+            <div class="course-card">
+                <h3>Web Development Bootcamp</h3>
+                <p>Learn HTML, CSS, JavaScript, and build real projects.</p>
+                <button>Enroll Now</button>
+            </div>
+
+            <div class="course-card">
+                <h3>Python for Beginners</h3>
+                <p>Master Python fundamentals and problem-solving skills.</p>
+                <button>Enroll Now</button>
+            </div>
+
+            <div class="course-card">
+                <h3>Digital Marketing Essentials</h3>
+                <p>SEO, social media marketing, Google Ads & analytics.</p>
+                <button>Enroll Now</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ENROLLMENT SECTION -->
+    <section id="enroll" class="enroll-section">
+        <h2>Join Our Learning Community</h2>
+        <form class="enroll-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+                <option value="">Select a Course</option>
+                <option>Web Development Bootcamp</option>
+                <option>Python for Beginners</option>
+                <option>Digital Marketing Essentials</option>
+            </select>
+            <button type="submit">Submit Enrollment</button>
+        </form>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="testimonial-section">
+        <h2>What Students Say</h2>
+        <div class="testimonial-container">
+
+            <div class="testimonial-card">
+                <p>"Amazing platform! The courses are well-structured and easy to follow."</p>
+                <h4>— Sarah K.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"I landed my first job in tech thanks to LearnHub Academy!"</p>
+                <h4>— Mark T.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p>"The instructors are knowledgeable and engaging. Highly recommended."</p>
+                <h4>— Emma R.</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 LearnHub Academy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
